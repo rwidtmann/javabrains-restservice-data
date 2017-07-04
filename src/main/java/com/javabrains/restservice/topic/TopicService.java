@@ -37,7 +37,7 @@ public class TopicService {
     }
 
     public void deleteTopic (String id) {
-        topicRepository.delwete(id);
+        topicRepository.delete(id);
     }
 }
 
