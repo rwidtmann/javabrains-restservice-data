@@ -23,6 +23,7 @@ public class TopicService {
     }
 
     public Topic getTopic(String id) {
+        System.out.println("rjw - testing git");
         return topicRepository.findOne(id);
     }
 
