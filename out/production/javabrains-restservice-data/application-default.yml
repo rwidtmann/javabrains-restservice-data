@@ -1,3 +1,5 @@
+
+
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/widtmann_db
@@ -7,9 +9,12 @@ spring:
       ddl-auto: validate
   thymeleaf:
     cache: false
+    mode: HTML5
 
 security:
   basic:
     enabled: false
+
+
 
 #binq.url: http://gateway-test-in-proc.test.hcscint.net/services/ccsp/uat-3a/BenefitInquiry/v4

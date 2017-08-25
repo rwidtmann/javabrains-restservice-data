@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/application}">
+<head>
+    <title>Topics Page</title>
+</head>
+
+<body>
+<div layout:fragment="content" class="container">
+    <div class="alert alert-success" th:if="${notice}">
+        [[${notice}]]
+    </div>
+
+    <h1>
+        Topics Page
+    </h1>
+
+    </div>
+
+</body>
+</html>
