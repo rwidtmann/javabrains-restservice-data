@@ -1,4 +1,4 @@
-package com.javabrains.restservice.topic;
+package com.javabrains.restservice.topicsadmin;
 
 
 import com.javabrains.restservice.topic.TopicService;
@@ -16,16 +16,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class TopicViewController {
 
-
-    @GetMapping("/home")
-    public String index1() {
-        return "index";
-    }
-
-
     @GetMapping("/topics-viewer")
     public String index() {
             return "topics-viewer/index";
         }
-
 }

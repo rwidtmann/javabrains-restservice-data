@@ -36,6 +36,7 @@ dependencies {
 	compile "org.flywaydb:flyway-core"
 	compile 'org.webjars.npm:bootstrap:3.3.7'
 	compile "org.webjars:jquery:2.2.4"
+	compile "org.webjars:webjars-locator"
 
 	runtime "mysql:mysql-connector-java"
 
