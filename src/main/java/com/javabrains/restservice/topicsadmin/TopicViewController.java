@@ -16,8 +16,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class TopicViewController {
 
-    @GetMapping("/topics-viewer")
+    @GetMapping("/topicsadmin")
     public String index() {
-            return "topics-viewer/index";
+            return "topicsadmin/index";
         }
 }

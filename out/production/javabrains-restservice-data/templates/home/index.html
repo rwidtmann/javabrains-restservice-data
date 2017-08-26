@@ -2,7 +2,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/application}">
 <head>
-    <title>Home Page</title>
+    <title>Topics Admin</title>
 </head>
 
 <body>
@@ -14,8 +14,16 @@
     <h1>
         Home Page
     </h1>
+    <h1>
+        Account Overrides
+        <a class="btn btn-primary pull-right" th:href="@{/topicsadmin}">
+            Create Override
+        </a>
+    </h1>
 
-    </div>
 
+<script layout:fragment="javascript" th:inline="javascript">
+    $('tbody tr').clickableRow();
+</script>
 </body>
 </html>

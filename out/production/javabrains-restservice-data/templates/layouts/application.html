@@ -13,24 +13,12 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" th:href="@{/}">Betsy</a>
+            <a class="navbar-brand" th:href="@{/}">Home</a>
         </div>
 
         <ul class="nav navbar-nav">
-            <li th:class="${#httpServletRequest.getRequestURI().contains('default-benefit-overrides') ? 'active' : ''}">
-                <a th:href="@{/default-benefit-overrides}">Defaults</a>
-            </li>
-            <li th:class="${#httpServletRequest.getRequestURI().contains('topics-viewer') ? 'active' : ''}">
-                <a th:href="@{/topics-viewer}">Topics Page</a>
-            </li>
-            <li th:class="${#httpServletRequest.getRequestURI().contains('account-benefit-overrides') ? 'active' : ''}">
-                <a th:href="@{/account-benefit-overrides}">Account Overrides</a>
-            </li>
-            <li th:class="${#httpServletRequest.getRequestURI().contains('product-benefit-overrides') ? 'active' : ''}">
-                <a th:href="@{/product-benefit-overrides}">Product Overrides</a>
-            </li>
-            <li th:class="${#httpServletRequest.getRequestURI().contains('disabled-apis') ? 'active' : ''}">
-                <a th:href="@{/disabled-apis}">Disabled BHS/SS</a>
+            <li th:class="${#httpServletRequest.getRequestURI().contains('admin') ? 'active' : ''}">
+                <a th:href="@{/testdir}">Topics Page</a>
             </li>
         </ul>
     </div>
