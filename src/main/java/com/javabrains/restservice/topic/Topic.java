@@ -6,7 +6,7 @@ import javax.persistence.Id;
 @Entity
 public class Topic {
     @Id
-    private String id;
+    private int id;
 
     private String name;
 
@@ -16,14 +16,14 @@ public class Topic {
 
     }
 
-    public Topic(String id, String name, String description){
+    public Topic(int id, String name, String description){
         super();
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -43,7 +43,7 @@ public class Topic {
         this.description = description;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
 
     }

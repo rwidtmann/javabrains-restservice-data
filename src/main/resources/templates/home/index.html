@@ -15,11 +15,31 @@
         Home Page
     </h1>
     <h1>
-        Account Overrides
         <a class="btn btn-primary pull-right" th:href="@{/topicsadmin}">
             Create Topic
         </a>
     </h1>
+
+    <h3>Topics</h3>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>DESCRIPTION</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="topic : ${topics}">
+            <td>[[${topic.id}]]</td>
+            <td>[[${topic.name}]]</td>
+            <td>[[${topic.description}]]</td>
+        </tr>
+
+        </tbody>
+    </table>
 
 
 <script layout:fragment="javascript" th:inline="javascript">
