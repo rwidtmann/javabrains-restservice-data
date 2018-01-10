@@ -1,10 +1,8 @@
 package com.javabrains.restservice.person;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -14,7 +12,7 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
-    @RequestMapping("/people")
+    @GetMapping("/people")
     public List<People> getAllPeople() {
         return personService.getAllPeople();
     }
