@@ -12,13 +12,13 @@ public class PersonService {
     @Autowired
     private PersonRepository personRepository;
 
-    public List<People> getAllPeople() {
-        List<People> peopleList = new ArrayList<>();
-        personRepository.findAll().forEach(peopleList::add);
-        return peopleList;
+    public List<Person> getAllPeople() {
+        List<Person> personList = new ArrayList<>();
+        personRepository.findAll().forEach(personList::add);
+        return personList;
     }
 
-    public void addPerson(People people) {
-        personRepository.save(people);
+    public Person addPerson(Person person) {
+       return personRepository.save(person);
     }
 }

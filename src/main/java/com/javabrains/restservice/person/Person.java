@@ -2,20 +2,21 @@ package com.javabrains.restservice.person;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Objects;
 
 @Entity
-public class People {
+public class Person {
     @Id
     private int personId;
     private String firstName;
     private String lastName;
     private int generationLevel;
 
-    public People() {
+    public Person() {
     }
 
-    public People(int id, String firstName, String lastName, int generationLevel) {
+    public Person(int id, String firstName, String lastName, int generationLevel) {
         this.personId = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -58,11 +59,11 @@ public class People {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        People people = (People) o;
-        return personId == people.personId &&
-                generationLevel == people.generationLevel &&
-                Objects.equals(firstName, people.firstName) &&
-                Objects.equals(lastName, people.lastName);
+        Person person = (Person) o;
+        return personId == person.personId &&
+                generationLevel == person.generationLevel &&
+                Objects.equals(firstName, person.firstName) &&
+                Objects.equals(lastName, person.lastName);
     }
 
     @Override
@@ -73,7 +74,7 @@ public class People {
 
     @Override
     public String toString() {
-        return "People{" +
+        return "Person{" +
                 "id=" + personId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
