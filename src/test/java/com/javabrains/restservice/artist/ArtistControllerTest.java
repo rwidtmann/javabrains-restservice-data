@@ -1,4 +1,4 @@
-package com.javabrains.restservice.Artist;
+package com.javabrains.restservice.artist;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -49,6 +49,7 @@ public class ArtistControllerTest {
 
         mockMvc.perform(get("/all-artists"))
                 .andExpect(jsonPath("$[0].artistLastName", is("Rundgren")))
+                .andExpect(jsonPath("$[1].artistFirstName", is("Bruce")))
                 .andExpect(status().isOk());
 
         verify(artistService).getAllArtists();

@@ -1,5 +1,5 @@
 create table topic(
-  id VARCHAR(255),
+  id BIGINT,
   name VARCHAR(100),
   description VARCHAR(100),
   PRIMARY KEY (id)

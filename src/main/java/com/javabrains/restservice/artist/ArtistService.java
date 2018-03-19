@@ -1,4 +1,4 @@
-package com.javabrains.restservice.Artist;
+package com.javabrains.restservice.artist;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,7 @@ public class ArtistService {
 
     public List<Artist> getAllArtists() {
         List<Artist> artistList = new ArrayList<>();
-        artistRepository.findAll().forEach(artistList :: add);
+        artistRepository.findAll().forEach(artistList::add);
         return artistList;
     }
 }

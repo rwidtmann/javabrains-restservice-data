@@ -20,7 +20,7 @@ public class TopicService {
         return topics;
     }
 
-    public Topic getTopic(String id) {
+    public Topic getTopic(Integer id) {
         System.out.println("rjw - testing git");
         return topicRepository.findOne(id);
     }
@@ -35,7 +35,7 @@ public class TopicService {
         topicRepository.save(topic);
     }
 
-    public void deleteTopic (String id) {
+    public void deleteTopic (Integer id) {
         topicRepository.delete(id);
     }
 }

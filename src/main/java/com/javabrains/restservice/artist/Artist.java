@@ -1,4 +1,4 @@
-package com.javabrains.restservice.Artist;
+package com.javabrains.restservice.artist;
 
 import javax.persistence.*;
 import java.util.List;

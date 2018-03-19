@@ -6,7 +6,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
+import org.yaml.snakeyaml.events.Event;
 
+import javax.persistence.Id;
 import java.util.Arrays;
 import java.util.List;
 
@@ -25,7 +27,7 @@ public class TopicController {
 
 
     @RequestMapping("/topics/{id}")
-    public Topic getTopic(@PathVariable String id) {
+    public Topic getTopic(@PathVariable Integer id) {
         return topicService.getTopic(id);
     }
 
@@ -40,7 +42,7 @@ public class TopicController {
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
-    public void deleteTopic(@PathVariable String id) {
+    public void deleteTopic(@PathVariable Integer id) {
         topicService.deleteTopic(id);
     }
 

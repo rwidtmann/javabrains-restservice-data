@@ -3,6 +3,10 @@ spring:
     url: jdbc:mysql://localhost:3306/widtmann_db
     username: root
   jpa:
+    properties:
+          hibernate:
+            show_sql: true
+            format_sql: true
     hibernate:
       ddl-auto: validate
   thymeleaf:
@@ -11,5 +15,11 @@ spring:
 security:
   basic:
     enabled: false
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
 
 #binq.url: http://gateway-test-in-proc.test.hcscint.net/services/ccsp/uat-3a/BenefitInquiry/v4
