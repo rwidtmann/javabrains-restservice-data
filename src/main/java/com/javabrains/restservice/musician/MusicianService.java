@@ -13,6 +13,7 @@ public class MusicianService {
     private MusicianRepository musicianRepository;
 
     public List<Musician> getAllMusicians() {
+        // just adding a comment
         List<Musician> musicians = new ArrayList<>();
         musicianRepository.findAll().forEach(musicians::add);
         return musicians;
