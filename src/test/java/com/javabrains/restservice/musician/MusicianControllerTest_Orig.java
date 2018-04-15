@@ -67,6 +67,7 @@ public class MusicianControllerTest_Orig {
         mockMvc.perform(get("/get-all-musicians"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].musicianFirstName", is("Joe")))
+                .andExpect(jsonPath("$[0].songList[1].songTitle", is("Take It Easy")))
         .andExpect(jsonPath("$[0].songList[0].songTitle", is("Rocky Mountain Way")));
 
         //assertThat(result.size()).isEqualTo(1);
@@ -75,69 +76,8 @@ public class MusicianControllerTest_Orig {
     }
 
 
+    @Test
+    public void deleteMusician() throws Exception {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //    @Autowired
-//    MockMvc mockMvc;
-//
-//    @MockBean
-//    Musician musician;
-//
-//    @MockBean
-//    MusicianService musicianService;
-//
-//    @Test
-//    public void doGet_simpleEndpoint_confirmation() throws Exception {
-//        mockMvc.perform(get("/musicians"))
-//                .andExpect(status().isOk());
-//    }
-//
-//    @Test
-//    public void doGet_endpointCheck_and_jsonPathCheck() throws Exception {
-//        List<Musician> musicians = Arrays.asList(
-//                new Musician(1, "David", "Gilmore", "Dark Side of The Moon"),
-//                new Musician(2, "Adrian", "Belew", "Mr. Music Head")
-//        );
-//
-//        when(musicianService.getAllMusicians())
-//                .thenReturn(musicians);
-//
-//        mockMvc.perform(get("/musicians"))
-//                .andExpect(jsonPath("$[0].musicianLastName", is("Gilmore")))
-//                .andExpect(jsonPath("$[1].musicianFirstName", is("Adrian")))
-//                .andExpect(status().isOk());
-//    }
-
-//    @Test
-//    public void getMusician() throws Exception {
-//        mockMvc.perform(get("/musician/{name}"))
-//                .andExpect(status().isOk());
-//    }
+    }
 }
