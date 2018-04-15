@@ -13,7 +13,6 @@ public class MusicianService {
     private MusicianRepository musicianRepository;
 
     public List<Musician> getAllMusicians() {
-        // adding comment for Jenkins test
         List<Musician> musicians = new ArrayList<>();
         musicianRepository.findAll().forEach(musicians::add);
         return musicians;
